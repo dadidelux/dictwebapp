@@ -1,0 +1,35 @@
+{% load static %} {% include 'main/header.html' %}
+<body>
+  <!-- this is the nav bar -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <h1>Hello User: {{ name }}</h1>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+      {% include 'main/sidenav.html' %}
+
+      <!-- Here is we put the information about our website contact details -->
+      <ul class="list-group">
+        <li class="list-group-item"><label>Agency: </label>{{ agency }}</li>
+        <li class="list-group-item"><label>Description: </label>{{ description }}</li>
+        <li class="list-group-item"><label>Address: </label>{{ address }}</li>
+        <li class="list-group-item"><label>Opening Hours: </label>{{ hours }}</li>
+        <li class="list-group-item"><label>Hotline: </label>{{ phone }}</li>
+        <li class="list-group-item"><label>ContactPerson: </label>{{ depex }}</li>
+        <li class="list-group-item"><label>Founded: </label>{{ founded }}</li>
+        <li class="list-group-item"><label>Child Agencies: </label>{{ childagency }}</li>
+        <li class="list-group-item"><label>Country: </label>{{ country }}</li>
+        <li class="list-group-item"><label>Budget: </label>{{ budget }}</li>
+      </ul>
+
+      <!-- end details -->
+    </div>
+  </div>
+
+  {% include 'main/footer.html' %}
+</body>
